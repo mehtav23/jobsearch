@@ -34,7 +34,7 @@
       <div class="ui-g-4 " style="text-align: right">Total Records {{totalRecords}}</div>
     </p-header>
     <div>
-      <p-table [value]="jobs" [paginator]="true" [rows]="10" [responsive]="true">
+      <p-table [value]="jobs" [paginator]="true" [rows]="10" [responsive]="true" [(first)]="first">
         <ng-template pTemplate="header">
           <tr>
             <th>Title</th>

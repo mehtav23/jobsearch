@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   selectedSkill;
   jobs: ISearch[];
   totalRecords = 0;
+  first = 0;
 
   constructor(private searchService: SearchService) { }
 
@@ -31,6 +32,7 @@ export class SearchComponent implements OnInit {
 
   getjobs() {
     this.page = 1;
+    this.first = 0;
     const params: any = {};
     params.location = this.selectedCity ? this.selectedCity : null;
     params.skill = this.selectedSkill ? this.selectedSkill : null;
